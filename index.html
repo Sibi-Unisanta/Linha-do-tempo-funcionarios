@@ -304,7 +304,7 @@ const TIMELINE = [
     title:"A semente da história",
     teaser:"Fundação da Escola Primária Santa Cecília.",
     text:`<p>Em 1932, a Escola Primária Santa Cecília foi fundada, plantando a semente do futuro complexo educacional que décadas depois daria origem à Unisanta e ao seu sistema de bibliotecas.</p>`,
-    images:[]
+    images:[{src:"images/1932-primeira-escola.jpg", cap:"Primeira Escola"}]
   },
   {
     year:"1961",
@@ -455,6 +455,7 @@ const GALLERY = [
 
 const STAFF = [{"nome_exibicao":"Ana Maria Racioppi Silveira","funcao":"BIBLIOTECARIO (A) COORDENADOR","admissao":"1977-12-12","demissao":"2025-06-28","situacao":"Ex-funcionário","destaque":true, "grupo":"homenagem"},
 {"nome_exibicao":"Sandra Cristina M. S. Lameiras","funcao":"AUXILIAR DE BIBLIOTECA","admissao":"1988-04-04","demissao":"2007-03-31","situacao":"Ex-funcionário","destaque":false},
+{"nome_exibicao":"Fernanda Marzabal Guimaraes de Souza","funcao":"AUXILIAR DE BIBLIOTECA","admissao":"1989-02-14","demissao":null,"situacao":"Ativo","destaque":false,"grupo":"coordenacao","observacao":"passou a ser Secretária da Diretoria (SENIOR) - Dra. Silvia em 01/08/2009"},
 {"nome_exibicao":"Sueli Regina Prata De Andrade Da Luz","funcao":"AUXILIAR DE BIBLIOTECA","admissao":"1995-03-13","demissao":"2025-05-16","situacao":"Ex-funcionário","destaque":false},
 {"nome_exibicao":"Sandra Regina Vicente Cunha","funcao":"AUXILIAR DE BIBLIOTECA","admissao":"1997-01-17","demissao":"2020-11-19","situacao":"Ex-funcionário","destaque":false},
 {"nome_exibicao":"Nycia Rodrigues De Oliveira","funcao":"AUXILIAR DE BIBLIOTECA","admissao":"1997-08-13","demissao":"2018-08-15","situacao":"Ex-funcionário","destaque":false},
@@ -535,7 +536,7 @@ function createStaffCard(p){
 
   const statusHtml = isAnaMaria
     ? `<span class="eq-status ex">48 anos de dedicação à Unisanta</span>`
-    : `<span class="eq-status ${p.situacao === 'Ativo' ? 'ativo' : 'ex'}">${p.situacao === 'Ativo' ? 'Sem demissão registrada' : 'Ex-funcionário na relação'}</span>`;
+    : `<span class="eq-status ${p.situacao === 'Ativo' ? 'ativo' : 'ex'}">${p.situacao === 'Ativo' ? 'Em Atividade' : 'Ex-Colaborador'}</span>`;
 
   card.innerHTML = `
     <h3>${p.nome_exibicao}${p.destaque ? ' ★' : ''}</h3>
